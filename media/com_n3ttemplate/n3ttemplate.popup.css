@@ -1,0 +1,6 @@
+html, body {margin: 0 !important; padding: 0 !important; overflow: hidden !important;height:100% !important;}
+#n3tTemplateWrapper {height: 390px; width: 560px; margin: 5px;position: absolute;top: 0;left: 0;}
+#n3tTemplateButtons {height: 30px; text-align: right;}
+#n3tTemplateTree {border: 1px solid #999; height: 200px; overflow: auto;}
+#n3tTemplateTree.n3tTemplateTreeFull {height: 355px;}
+#n3tTemplatePreview {border: 1px solid #999; display: block; height: 150px; margin-top: 5px; width: 558px;}

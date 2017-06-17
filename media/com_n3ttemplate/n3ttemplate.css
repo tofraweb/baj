@@ -1,0 +1,8 @@
+.cpanelModulesWrapper {width: 40%; float: right;}
+.cpanelIconsWrapper {width: 60%; float: left;}
+.icon-48-n3ttemplate {background-image:url("images/icon-48-n3ttemplate.png");}
+.icon-32-save2new {background-image:url("images/icon-32-save2new.png");}
+.icon-32-save2copy {background-image:url("images/icon-32-save2copy.png");}
+.elementHeading {display: block; font-size: 1.1em; font-weight: bold; margin: -3px; padding: 3px; background: #F6F6F6;}
+.elementDescription {display: block; font-size: 0.9em; margin: -3px; padding: 3px; color: #666;}
+.elementWarning {display: block; font-weight: bold; color: #f00;}

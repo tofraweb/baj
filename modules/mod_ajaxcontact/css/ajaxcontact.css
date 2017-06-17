@@ -1,0 +1,40 @@
+/* Field styling */
+#ajaxcontact input.inputbox{width:95%}
+#ajaxcontact .ac-cf-type-date input.inputbox{float:left;width:78% !important}
+#ajaxcontact select.inputbox{width:95%}
+#ajaxcontact textarea.inputbox{width:95%;overflow:auto}
+#ajaxcontact .mathguard-answer{width:20px!important}
+#ajaxcontact #ac-email-copy-container{padding:5px 0 5px 0}
+#ajaxcontact span.ac_limit_chars{font-weight:bolder} /* xxx remaining characters  */
+
+/* Field Container */
+.ac-cf-container{}
+
+/* Checkboxes*/
+#ajaxcontact .ac-checkbox{border:none !important} /* To avoid problems with IE */
+.ac-option-container input.required{background:none !important}  /* To avoid problems with IE */
+.ac-option-container{float:left;width:99%}
+/* Labels */
+#ajaxcontact .ac-field-label{padding:9px 0 0;display:block;clear:both}
+.ac-label-hidden{display:none}
+
+/* Validation */
+.required{background-image: url(../images/required_bg.gif) !important;background-repeat:no-repeat !important;background-position:top right !important}
+label.requiredField{font-weight:bold}
+#ajaxcontact .invalid,
+#ajaxcontact input.invalid, 
+#ajaxcontact select.invalid,
+#ajaxcontact textarea.invalid,
+.validation-failed{border-color:#F00 !important}
+#ajaxcontact label.invalid,
+.validation-advice{color:#F00;font-weight:bold;padding-bottom:5px}
+
+/* Message box */
+#ajaxcontact div.message{font-weight:bold;padding:3px}
+#ajaxcontact div.error{color:#A90F1E}
+#ajaxcontact div.success{color:#5FA72B}
+#ajaxcontact div.ajax-loading{padding:28px 0;background:url(../images/spinner.gif) no-repeat center}
+
+/* Captcha */
+input.captchacode{width:40px !important}
+.ideal-ajax-module div.securimage-field-container{clear:both}

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="plugin" version="1.6.0" group="n3ttemplate" method="upgrade">
+	<name>PLG_N3TTEMPLATE_FOLDER_MANIFEST_NAME</name>
+	<creationDate>2011-10-10</creationDate>
+	<author>Pavel Poles - n3t.cz</author>
+	<authorEmail></authorEmail>
+	<authorUrl>joomlacode.org/gf/project/n3t</authorUrl>
+	<copyright>(c) 2010-2012 Pavel Poles - n3t.cz. All rights reserved.</copyright>
+	<license>GNU/GPLv3 http://www.gnu.org/licenses/gpl-3.0.html</license>
+	<version>1.7.6</version>
+	<description>PLG_N3TTEMPLATE_FOLDER_MANIFEST_DESCRIPTION</description>
+	<files>
+		<filename plugin="folder">folder.php</filename>
+		<filename>index.html</filename>
+	</files>
+	<languages folder="languages.j16">
+		<language tag="cs-CZ">cs-CZ.plg_n3ttemplate_folder.ini</language>
+		<language tag="cs-CZ">cs-CZ.plg_n3ttemplate_folder.sys.ini</language>
+		<language tag="de-DE">de-DE.plg_n3ttemplate_folder.ini</language>
+		<language tag="de-DE">de-DE.plg_n3ttemplate_folder.sys.ini</language>
+		<language tag="en-GB">en-GB.plg_n3ttemplate_folder.ini</language>
+		<language tag="en-GB">en-GB.plg_n3ttemplate_folder.sys.ini</language>
+	</languages>
+	<config>
+	  <fields name="params">
+    	<fieldset name="general" label="PLG_N3TTEMPLATE_FOLDER_CFG_GENERAL_SETTINGS" description="">
+    	  <field name="base_path" type="text" default="images" label="PLG_N3TTEMPLATE_FOLDER_CFG_BASE_PATH" description="PLG_N3TTEMPLATE_FOLDER_CFG_BASE_PATH_DESC" size="30" />
+    		<field name="max_depth" type="text" default="" label="PLG_N3TTEMPLATE_FOLDER_CFG_MAX_DEPTH" description="PLG_N3TTEMPLATE_FOLDER_CFG_MAX_DEPTH_DESC" size="10" />
+    	  <field name="ommit_empty" type="list" default="0" label="PLG_N3TTEMPLATE_FOLDER_CFG_SHOW_EMPTY" description="PLG_N3TTEMPLATE_FOLDER_CFG_SHOW_EMPTY_DESC">    			
+    			<option value="0">PLG_N3TTEMPLATE_FOLDER_CFG_NO</option>
+    			<option value="1">PLG_N3TTEMPLATE_FOLDER_CFG_YES</option>
+    		</field>            	
+    		<field name="max_results" type="text" default="" label="PLG_N3TTEMPLATE_FOLDER_CFG_MAX_RESULTS" description="PLG_N3TTEMPLATE_FOLDER_CFG_MAX_RESULTS_DESC" size="10" />    		
+      </fieldset>
+      <fieldset name="output" label="PLG_N3TTEMPLATE_FOLDER_CFG_OUTPUT_SETTINGS" description="PLG_N3TTEMPLATE_FOLDER_CFG_OUTPUT_SETTINGS_DESC">
+    	  <field name="output" type="list" default="custom" label="PLG_N3TTEMPLATE_FOLDER_CFG_OUTPUT" description="PLG_N3TTEMPLATE_FOLDER_CFG_OUTPUT_DESC">    			
+    			<option value="simapleimagegallery">PLG_N3TTEMPLATE_FOLDER_CFG_OUTPUT_SIMPLE_IMAGE_GALLERY</option>
+    			<option value="ppgallery">PLG_N3TTEMPLATE_FOLDER_CFG_OUTPUT_PPGALLERY</option>
+    			<option value="cssgallery">PLG_N3TTEMPLATE_FOLDER_CFG_OUTPUT_CSS_GALLERY</option>
+    			<option value="mp3browser">PLG_N3TTEMPLATE_FOLDER_CFG_OUTPUT_MP3_BROWSER</option>
+    			<option value="custom">PLG_N3TTEMPLATE_FOLDER_CFG_OUTPUT_CUSTOM</option>
+    		</field>
+        <field name="custom_output" type="textarea" default="" label="PLG_N3TTEMPLATE_FOLDER_CFG_CUSTOM_OUTPUT" description="PLG_N3TTEMPLATE_FOLDER_CFG_CUSTOM_OUTPUT_DESC" rows="10" cols="35" />            	  
+      </fieldset>      
+	  </fields>
+	</config>  	
+</extension>

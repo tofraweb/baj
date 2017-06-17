@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="plugin" version="1.6.0" group="n3ttemplate" method="upgrade">
+	<name>PLG_N3TTEMPLATE_MODULE_MANIFEST_NAME</name>
+	<creationDate>2011-08-05</creationDate>
+	<author>Pavel Poles - n3t.cz</author>
+	<authorEmail></authorEmail>
+	<authorUrl>joomlacode.org/gf/project/n3t</authorUrl>
+	<copyright>(c) 2010-2012 Pavel Poles - n3t.cz. All rights reserved.</copyright>
+	<license>GNU/GPLv3 http://www.gnu.org/licenses/gpl-3.0.html</license>
+	<version>1.7.6</version>
+	<description>PLG_N3TTEMPLATE_MODULE_MANIFEST_DESCRIPTION</description>
+	<files>
+		<filename plugin="module">module.php</filename>
+		<filename>index.html</filename>
+	</files>
+	<languages folder="languages.j16">
+		<language tag="cs-CZ">cs-CZ.plg_n3ttemplate_module.ini</language>
+		<language tag="cs-CZ">cs-CZ.plg_n3ttemplate_module.sys.ini</language>
+		<language tag="de-DE">de-DE.plg_n3ttemplate_module.ini</language>
+		<language tag="de-DE">de-DE.plg_n3ttemplate_module.sys.ini</language>
+		<language tag="en-GB">en-GB.plg_n3ttemplate_module.ini</language>
+		<language tag="en-GB">en-GB.plg_n3ttemplate_module.sys.ini</language>
+	</languages>
+	<config>
+	  <fields name="params">
+    	<fieldset name="general" label="PLG_N3TTEMPLATE_MODULE_CFG_GENERAL_SETTINGS" description="">
+    		<field name="only_published" type="radio" default="0" label="PLG_N3TTEMPLATE_MODULE_CFG_ONLY_PUBLISHED" description="PLG_N3TTEMPLATE_MODULE_CFG_ONLY_PUBLISHED_DESC">
+    			<option value="0">PLG_N3TTEMPLATE_MODULE_CFG_NO</option>
+    			<option value="1">PLG_N3TTEMPLATE_MODULE_CFG_YES</option>
+    		</field>
+    		<field name="max_results" type="text" default="" label="PLG_N3TTEMPLATE_MODULE_CFG_MAX_RESULTS" description="PLG_N3TTEMPLATE_MODULE_CFG_MAX_RESULTS_DESC" size="10" />    		
+      </fieldset>
+      <fieldset name="output" label="PLG_N3TTEMPLATE_MODULE_CFG_OUTPUT_SETTINGS" description="PLG_N3TTEMPLATE_MODULE_CFG_OUTPUT_SETTINGS_DESC">
+    	  <field name="output" type="list" default="loadmodule" label="PLG_N3TTEMPLATE_MODULE_CFG_OUTPUT" description="PLG_N3TTEMPLATE_MODULE_CFG_OUTPUT_DESC">    			
+    			<option value="loadmodule">PLG_N3TTEMPLATE_MODULE_CFG_OUTPUT_LOADMODULE</option>
+    			<option value="modulesanywhere">PLG_N3TTEMPLATE_MODULE_CFG_OUTPUT_MODULES_ANYWHERE</option>
+    			<option value="custom">PLG_N3TTEMPLATE_MODULE_CFG_OUTPUT_CUSTOM</option>
+    		</field>
+        <field name="custom_output" type="textarea" default="" label="PLG_N3TTEMPLATE_MODULE_CFG_CUSTOM_OUTPUT" description="PLG_N3TTEMPLATE_MODULE_CFG_CUSTOM_OUTPUT_DESC" rows="10" cols="35" />            	  
+      </fieldset>      
+	  </fields>
+	</config>  	
+</extension>

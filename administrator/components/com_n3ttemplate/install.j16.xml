@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="component" version="1.6.0" method="upgrade">
+  <name>n3tTemplate</name>
+  <creationDate>2011-08-03</creationDate>
+  <author>Pavel Poles - n3t.cz</author>
+  <authorEmail></authorEmail>
+  <authorUrl>joomlacode.org/gf/project/n3t</authorUrl>
+  <copyright>(c) 2010-2012 Pavel Poles - n3t.cz. All rights reserved.</copyright>
+  <license>GNU/GPLv3 http://www.gnu.org/licenses/gpl-3.0.html</license>
+  <version>1.7.6</version>
+  <description>COM_N3TTEMPLATE_MANIFEST_DESCRIPTION</description>
+  <updateservers>
+    <server type="collection" priority="1" name="n3t Extensions Updates">http://joomla.n3t.cz/updates/extensions.xml</server>
+  </updateservers>  
+  <scriptfile>install/install.n3ttemplate.j16.php</scriptfile>
+  <install>
+    <sql>
+      <file driver="mysql" charset="utf8">install/install.mysql.sql</file>
+    </sql>
+  </install>
+  <uninstall>
+    <sql>
+      <file driver="mysql" charset="utf8">install/uninstall.mysql.sql</file>
+    </sql>
+  </uninstall>
+  <demo>
+    <sql>
+      <file driver="mysql" charset="utf8">install/demo.mysql.sql</file>
+      <file driver="mysql" charset="utf8">install/demo.mysql.j16.sql</file>
+    </sql>
+  </demo>
+  <update>
+    <schemas>
+      <schemapath type="mysql">install/update/mysql</schemapath>
+      <schemapath type="script">install/update/script</schemapath>
+    </schemas>
+  </update>
+  <files folder="site">
+    <filename>index.html</filename>
+    <filename>n3ttemplate.php</filename>
+  </files>
+  <media destination="com_n3ttemplate" folder="media">
+    <folder>images</folder>
+    <folder>mootree</folder>
+    
+    <filename>index.html</filename>
+    <filename>n3ttemplate.css</filename>
+    <filename>n3ttemplate.popup.css</filename>
+  </media>
+  <administration>
+    <menu img="../media/com_n3ttemplate/images/icon-16-n3ttemplate.png">COM_N3TTEMPLATE</menu>
+    <files folder="admin">
+      <folder>controllers</folder>
+      <folder>fields</folder>
+      <folder>help</folder>
+      <folder>helpers</folder>
+      <folder>install</folder>
+      <folder>models</folder>
+      <folder>params</folder>
+      <folder>tables</folder>
+      <folder>views</folder>
+
+      <filename>access.xml</filename>
+      <filename>config.xml</filename>
+      <filename>controller.php</filename>
+      <filename>index.html</filename>
+      <filename>model.php</filename>
+      <filename>n3ttemplate.php</filename>
+      <filename>view.php</filename>
+    </files>
+    <languages folder="admin/language.j16">
+      <language tag="cs-CZ">cs-CZ.com_n3ttemplate.ini</language>
+      <language tag="cs-CZ">cs-CZ.com_n3ttemplate.sys.ini</language>
+      <language tag="de-DE">de-DE.com_n3ttemplate.ini</language>
+      <language tag="de-DE">de-DE.com_n3ttemplate.sys.ini</language>
+      <language tag="en-GB">en-GB.com_n3ttemplate.ini</language>
+      <language tag="en-GB">en-GB.com_n3ttemplate.sys.ini</language>
+    </languages>
+  </administration>
+  <modules folder="modules">
+    <module module="mod_n3ttemplate_credits" client="administrator" ordering="1" />
+  </modules>
+  <plugins folder="plugins">
+    <plugin plugin="n3ttemplate" group="editors-xtd" />
+    <plugin plugin="n3ttemplate" group="content" />
+    <plugin plugin="acepolls" group="n3ttemplate" />
+    <plugin plugin="file" group="n3ttemplate" />
+    <plugin plugin="folder" group="n3ttemplate" />
+    <plugin plugin="module" group="n3ttemplate" />
+    <plugin plugin="phocamaps" group="n3ttemplate" />
+    <plugin plugin="position" group="n3ttemplate" />
+    <plugin plugin="youtube" group="n3ttemplate" />
+  </plugins>  
+</extension>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<model>
+	<params addPath="/administrator/components/com_n3ttemplate/elements">
+	  <param type="heading" heading="COM_N3TTEMPLATE_CFG_GENERAL_SETTINGS" />
+  </params>
+	<fieldset name="general" label="COM_N3TTEMPLATE_CFG_GENERAL_SETTINGS" description="">
+  </fieldset>
+</model>

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="2.5" type="plugin" group="content" method="upgrade">
+	<name>Content - MooAccordion Show/Hide (in articles) plugin</name>
+	<author>Andrew Patton</author>
+	<creationDate>July 2012</creationDate>
+	<copyright>Copyright (C) 2012 Andrew Patton. All rights reserved.</copyright>
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+	<authorEmail>andrew@acusti.ca</authorEmail>
+	<authorUrl>www.acusti.ca</authorUrl>
+	<version>1.0.4</version>
+	<description>&lt;p&gt;MooAccordion makes it very easy to add MooTools accordion slides (show/hide blocks) to any article. The syntax is simple: {mooblock=Trigger Title (used to trigger the slide)}&lt;br /&gt;Content of the slide block...{/mooblock}.&lt;/p&gt;&lt;p&gt;Features include: &lt;/p&gt;&lt;ul&gt;&lt;li&gt;adds class for active block title, allowing you to &lt;a href="http://www.acusti.ca/mooaccordion-css-show-hide-demo-tutorial.html"&gt;toggle it's icon (for ex, from a + to a - icon)&lt;/a&gt;&lt;/li&gt;&lt;li&gt;adds minimal markup (and intelligently strips unnecessary markup added by editors like tinyMCE and JCE, if present) to keep the html clean and valid&lt;/li&gt;&lt;li&gt;uses Joomla core MooTools library, which means this plugin adds &lt;i&gt;no&lt;/i&gt; HTTP requests, minimizes dependencies, prevents JS conflicts, and makes it very lightweight&lt;/li&gt;&lt;li&gt;very easy for anyone to use (without technical knowledge) and very flexible&lt;/li&gt;&lt;li&gt;the show/hide effects and other settings are easily customizable from the plugin's configuration&lt;/li&gt;&lt;li&gt;compatible with Internet Explorer 6-9, Firefox, Chrome, Safari, Opera, etc.&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;Note: the title can contain html if desired. If it is wrapped by one html element, that element will be used as the title toggler. Otherwise, it will wrap the title in a &amp;lt;p&amp;gt; tag. Also, the title cannot contain '}' or the plugin will incorrectly interpret that as the end of the title.&lt;/p&gt;&lt;p&gt;Lastly, &lt;em&gt;don‘t forget to enable the plugin&lt;/em&gt;!&lt;/p&gt;</description>
+	<files>
+		<filename plugin="mooaccordion">mooaccordion.php</filename>
+		<filename>language/en-GB/en-GB.plg_content_mooaccordion.ini</filename>
+	</files>
+	<languages>
+		<language tag="en-GB">language/en-GB/en-GB.plg_content_mooaccordion.ini</language>
+	</languages>
+	<config>
+		<fields name="params">
+			<fieldset name="basic">
+				<field name="show_first" type="radio" default="0" label="Show first block" description="Load the page with the first block expanded">
+					<option value="0">No</option>
+					<option value="1">Yes</option>
+				</field>
+				<field name="first_transition" type="radio" default="1" label="Show first block with transition" description="Use a transition when the page is loaded to expand the first block">
+					<option value="0">No</option>
+					<option value="1">Yes</option>
+				</field>
+				<field name="always_hide" type="radio" default="0" label="Allow all blocks to be collapsed" description="Make it possible to close all displayable blocks">
+					<option value="0">No</option>
+					<option value="1">Yes</option>
+				</field>
+				<field name="trigger" type="radio" default="0" label="Trigger on" description="Which event triggers a change">
+					<option value="0">Click</option>
+					<option value="1">Hover</option>
+				</field>
+				<field name="@spacer" type="spacer" default="Transition effect settings" label="" description="" />
+				<field name="duration" type="list" default="500" label="Transition length" description="Duration of the transition effect">
+					<option value="250">Short</option>
+					<option value="500">Normal</option>
+					<option value="900">Long</option>
+				</field>
+				<field name="transition" type="list" default="0" label="Effect type" description="Type of transition effect">
+					<option value="0">Sine</option>
+					<option value="Bounce">Bounce</option>
+					<option value="Elastic">Elastic</option>
+					<option value="Back">Back</option>
+				</field>
+				<field name="opacity" type="radio" default="1" label="Opacity transition" description="Use an opacity transition effect when switching between displayed blocks">
+					<option value="0">No</option>
+					<option value="1">Yes</option>
+				</field>
+			</fieldset>
+		</fields>
+	</config>
+</extension>

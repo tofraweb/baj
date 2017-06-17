@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="1.6.0" method="upgrade" client="administrator">
+	<name>n3tTemplate credits</name>
+	<creationDate>2011-02-17</creationDate>
+	<author>Pavel Poles - n3t.cz</author>
+	<authorEmail></authorEmail>
+	<authorUrl>joomlacode.org/gf/project/n3t</authorUrl>
+	<copyright>(c) 2010-2012 Pavel Poles - n3t.cz. All rights reserved.</copyright>
+	<license>GNU/GPLv3 http://www.gnu.org/licenses/gpl-3.0.html</license>
+	<version>1.7.6</version>
+	<description>MOD_N3TTEMPLATE_CREDITS_MANIFEST_DESCRIPTION</description>
+	<files>
+	  <folder>tmpl</folder>
+
+		<filename module="mod_n3ttemplate_credits">mod_n3ttemplate_credits.php</filename>
+		<filename>index.html</filename>
+	</files>
+	<languages folder="languages.j16">
+		<language tag="cs-CZ">cs-CZ.mod_n3ttemplate_credits.ini</language>
+		<language tag="cs-CZ">cs-CZ.mod_n3ttemplate_credits.sys.ini</language>
+		<language tag="de-DE">de-DE.mod_n3ttemplate_credits.ini</language>
+		<language tag="de-DE">de-DE.mod_n3ttemplate_credits.sys.ini</language>
+		<language tag="en-GB">en-GB.mod_n3ttemplate_credits.ini</language>
+		<language tag="en-GB">en-GB.mod_n3ttemplate_credits.sys.ini</language>
+	</languages>
+	<params />
+</extension>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<model>
+	<params addPath="/administrator/components/com_n3ttemplate/elements">
+	  <param type="heading" heading="COM_N3TTEMPLATE_CFG_GENERAL_SETTINGS" />
+		<param name="load_expanded" type="radio" default="0" label="COM_N3TTEMPLATE_CFG_LOAD_EXPANDED" description="COM_N3TTEMPLATE_CFG_LOAD_EXPANDED_DESC">
+			<option value="0">COM_N3TTEMPLATE_CFG_COLLAPSED</option>
+			<option value="1">COM_N3TTEMPLATE_CFG_EXPANDED</option>
+		</param>
+  </params>
+	<fieldset name="general" label="COM_N3TTEMPLATE_CFG_GENERAL_SETTINGS" description="">
+		<field name="load_expanded" type="radio" default="0" label="COM_N3TTEMPLATE_CFG_LOAD_EXPANDED" description="COM_N3TTEMPLATE_CFG_LOAD_EXPANDED_DESC">
+			<option value="0">COM_N3TTEMPLATE_CFG_COLLAPSED</option>
+			<option value="1">COM_N3TTEMPLATE_CFG_EXPANDED</option>
+		</field>
+  </fieldset>
+</model>

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="plugin" version="1.6.0" group="n3ttemplate" method="upgrade">
+	<name>PLG_N3TTEMPLATE_ACEPOLLS_MANIFEST_NAME</name>
+	<creationDate>2011-12-27</creationDate>
+	<author>Pavel Poles - n3t.cz</author>
+	<authorEmail></authorEmail>
+	<authorUrl>joomlacode.org/gf/project/n3t</authorUrl>
+	<copyright>(c) 2010-2012 Pavel Poles - n3t.cz. All rights reserved.</copyright>
+	<license>GNU/GPLv3 http://www.gnu.org/licenses/gpl-3.0.html</license>
+	<version>1.7.6</version>
+	<description>PLG_N3TTEMPLATE_ACEPOLLS_MANIFEST_DESCRIPTION</description>
+	<files>
+		<filename plugin="acepolls">acepolls.php</filename>
+		<filename>index.html</filename>
+	</files>
+	<languages folder="languages.j16">
+		<language tag="cs-CZ">cs-CZ.plg_n3ttemplate_acepolls.ini</language>
+		<language tag="cs-CZ">cs-CZ.plg_n3ttemplate_acepolls.sys.ini</language>
+		<language tag="de-DE">de-DE.plg_n3ttemplate_acepolls.ini</language>
+		<language tag="de-DE">de-DE.plg_n3ttemplate_acepolls.sys.ini</language>
+		<language tag="en-GB">en-GB.plg_n3ttemplate_acepolls.ini</language>
+		<language tag="en-GB">en-GB.plg_n3ttemplate_acepolls.sys.ini</language>
+	</languages>
+	<config>
+	  <fields name="params" addfieldpath="/administrator/components/com_n3ttemplate/fields">
+    	<fieldset name="general" label="PLG_N3TTEMPLATE_ACEPOLLS_CFG_GENERAL_SETTINGS" description="">
+    	  <field type="warning" warning="PLG_N3TTEMPLATE_ACEPOLLS_CFG_WARNING" table="#__acepolls_polls" />
+    		<field name="only_published" type="radio" default="0" label="PLG_N3TTEMPLATE_ACEPOLLS_CFG_ONLY_PUBLISHED" description="PLG_N3TTEMPLATE_ACEPOLLS_CFG_ONLY_PUBLISHED_DESC">
+    			<option value="0">PLG_N3TTEMPLATE_ACEPOLLS_CFG_NO</option>
+    			<option value="1">PLG_N3TTEMPLATE_ACEPOLLS_CFG_YES</option>
+    		</field>
+    		<field name="ordering" type="list" default="idasc" label="PLG_N3TTEMPLATE_ACEPOLLS_CFG_ORDERING" description="PLG_N3TTEMPLATE_ACEPOLLS_CFG_ORDERING_DESC">
+    			<option value="idasc">PLG_N3TTEMPLATE_ACEPOLLS_CFG_ORDERING_ID_ASC</option>
+    			<option value="iddesc">PLG_N3TTEMPLATE_ACEPOLLS_CFG_ORDERING_ID_DESC</option>
+    			<option value="titleasc">PLG_N3TTEMPLATE_ACEPOLLS_CFG_ORDERING_TITLE_ASC</option>
+    			<option value="titledesc">PLG_N3TTEMPLATE_ACEPOLLS_CFG_ORDERING_TITLE_DESC</option>
+    		</field>    		
+    		<field name="max_results" type="text" default="" label="PLG_N3TTEMPLATE_ACEPOLLS_CFG_MAX_RESULTS" description="PLG_N3TTEMPLATE_ACEPOLLS_CFG_MAX_RESULTS_DESC" size="10" />    		
+      </fieldset>
+      <fieldset name="output" label="PLG_N3TTEMPLATE_ACEPOLLS_CFG_OUTPUT_SETTINGS" description="PLG_N3TTEMPLATE_ACEPOLLS_CFG_OUTPUT_SETTINGS_DESC">
+    	  <field name="output" type="list" default="plugin" label="PLG_N3TTEMPLATE_ACEPOLLS_CFG_OUTPUT" description="PLG_N3TTEMPLATE_ACEPOLLS_CFG_OUTPUT_DESC">    			
+    			<option value="plugin">PLG_N3TTEMPLATE_ACEPOLLS_CFG_OUTPUT_PLUGIN</option>
+    			<option value="custom">PLG_N3TTEMPLATE_ACEPOLLS_CFG_OUTPUT_CUSTOM</option>
+    		</field>
+        <field name="custom_output" type="textarea" default="" label="PLG_N3TTEMPLATE_ACEPOLLS_CFG_CUSTOM_OUTPUT" description="PLG_N3TTEMPLATE_ACEPOLLS_CFG_CUSTOM_OUTPUT_DESC" rows="10" cols="35" />            	  
+      </fieldset>      
+	  </fields>
+	</config>  	
+</extension>

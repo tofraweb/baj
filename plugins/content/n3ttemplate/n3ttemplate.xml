@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="plugin" version="1.6.0" group="content" method="upgrade">
+	<name>n3tTemplate</name>
+	<creationDate>2011-02-17</creationDate>
+	<author>Pavel Poles - n3t.cz</author>
+	<authorEmail></authorEmail>
+	<authorUrl>joomlacode.org/gf/project/n3t</authorUrl>
+	<copyright>(c) 2010-2012 Pavel Poles - n3t.cz. All rights reserved.</copyright>
+	<license>GNU/GPLv3 http://www.gnu.org/licenses/gpl-3.0.html</license>
+	<version>1.7.6</version>
+	<description>PLG_CONTENT_N3TTEMPLATE_MANIFEST_DESCRIPTION</description>
+	<files>
+		<filename plugin="n3ttemplate">n3ttemplate.php</filename>
+		<filename>index.html</filename>
+	</files>
+	<languages folder="languages.j16">
+		<language tag="cs-CZ">cs-CZ.plg_content_n3ttemplate.ini</language>
+		<language tag="cs-CZ">cs-CZ.plg_content_n3ttemplate.sys.ini</language>
+		<language tag="de-DE">de-DE.plg_content_n3ttemplate.ini</language>
+		<language tag="de-DE">de-DE.plg_content_n3ttemplate.sys.ini</language>
+		<language tag="en-GB">en-GB.plg_content_n3ttemplate.ini</language>
+		<language tag="en-GB">en-GB.plg_content_n3ttemplate.sys.ini</language>
+	</languages>	
+</extension>

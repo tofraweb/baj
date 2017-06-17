@@ -1,0 +1,313 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="1.6" method="upgrade">
+  <name>AjaxContact</name>
+  <creationDate>05-Mar-2012</creationDate>
+  <author>Douglas Machado</author>
+  <authorEmail>admin@fok.com.br</authorEmail>
+  <authorUrl>http://idealextensions.com</authorUrl>
+  <copyright>2006 - 2011 - Ideal Extensions for Joomla - All rights reserved.</copyright>
+  <license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+  <version>2.5.1</version>
+  <description>MOD_AJAX_CONTACT_XML_DESC</description>
+  <files folder="site">
+    <folder>css</folder>
+    <folder>elements</folder>
+    <folder>images</folder>
+    <folder>js</folder>
+    <folder>language</folder>
+    <folder>tmpl</folder>
+    <filename>ajax.php</filename>
+    <filename>browser.php</filename>
+    <filename>customFields.class.php</filename>
+    <filename>helper.php</filename>
+    <filename>index.html</filename>
+    <filename module="mod_ajaxcontact">mod_ajaxcontact.php</filename>
+  </files>
+  <params/>
+
+  <languages folder="site/language">
+    <language tag="en-GB">en-GB/en-GB.mod_ajaxcontact.ini</language>
+  </languages>
+  <config>
+    <fields name="params" addfieldpath="/modules/mod_ajaxcontact/elements">
+      
+      
+      
+      
+    <fieldset name="basic">
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+      <field name="emailrecipient" type="text" default="" label="MOD_AJAXCONTACT_RECIPIENT_LABEL" description="MOD_AJAXCONTACT_RECIPIENT_DESC"></field><field name="bcc" type="text" default="" label="MOD_AJAXCONTACT_BLIND_COPY_LABEL" description="MOD_AJAXCONTACT_BLIND_COPY_DESC"></field><field name="senderemail" type="text" default="" label="MOD_AJAXCONTACT_SENDER_EMAIL_LABEL" description="MOD_AJAXCONTACT_SENDER_EMAIL_DESC"></field><field name="subject" type="text" default="%s sent a message via %s" label="MOD_AJAXCONTACT_SUBJECT_LABEL" description="MOD_AJAXCONTACT_SUBJECT_DESC"></field><field name="pretext" type="text" default="Hello!" label="MOD_AJAXCONTACT_GREETING_LABEL" description="MOD_AJAXCONTACT_GREETING_DESC"></field><field name="formpretext" type="textarea" cols="45" rows="3" default="" label="MOD_AJAXCONTACT_PRETEXT_LABEL" description="MOD_AJAXCONTACT_PRETEXT_DESC" filter="safehtml"></field><field name="showuserinfo" type="list" default="1" label="MOD_AJAXCONTACT_SHOW_USER_INFO_LABEL" description="MOD_AJAXCONTACT_SHOW_USER_INFO_DESC">
+          
+          
+          
+        <option value="2">MOD_AJAXCONTACT_SHOW_USER_INFO_TO_ALL</option><option value="1">MOD_AJAXCONTACT_SHOW_USER_INFO_RECIPIENT</option><option value="0">MOD_AJAXCONTACT_DO_NOT_SHOW</option></field><field name="clear_form_onsubmit" type="list" default="" label="MOD_AJAXCONTACT_RESET_LABEL" description="MOD_AJAXCONTACT_RESET_DESC">
+          
+          
+          
+          
+          
+          
+          
+          
+          
+        <option value="">JNO</option><option value="1">MOD_AJAXCONTACT_RESET_OPT_INSTANTLY</option><option value="3000">MOD_AJAXCONTACT_RESET_OPT_3_SECONDS</option><option value="5000">MOD_AJAXCONTACT_RESET_OPT_5_SECONDS</option><option value="10000">MOD_AJAXCONTACT_RESET_OPT_10_SECONDS</option><option value="30000">MOD_AJAXCONTACT_RESET_OPT_30_SECONDS</option><option value="60000">MOD_AJAXCONTACT_RESET_OPT_1_MINUTE</option><option value="120000">MOD_AJAXCONTACT_RESET_OPT_2_MINUTES</option><option value="300000">MOD_AJAXCONTACT_RESET_OPT_5_MINUTES</option></field><field name="clear_form_onsubmit-useFx" type="radio" default="0" label="MOD_AJAXCONTACT_USE_EFFECTS_LABEL" description="MOD_AJAXCONTACT_USE_EFFECTS_DESC">
+          
+          
+        <option value="0">JNO</option><option value="1">JYES</option></field><field name="show_email_copy" type="list" default="1" label="MOD_AJAXCONTACT_EMAIL_COPY_LABEL" description="MOD_AJAXCONTACT_EMAIL_COPY_DESC">
+          
+          
+          
+        <option value="1">MOD_AJAXCONTACT_EMAIL_COPY_OPT_SHOW_OPTION</option><option value="2">MOD_AJAXCONTACT_EMAIL_COPY_OPT_ALWAYS_SEND</option><option value="0">MOD_AJAXCONTACT_EMAIL_COPY_OPT_DONT_SEND</option></field><field name="enable_captcha" type="list" default="2" label="MOD_AJAXCONTACT_SHOW_CAPTCHA_LABEL" description="MOD_AJAXCONTACT_SHOW_CAPTCHA_DESC">
+          
+          
+          
+        <option value="2">MOD_AJAXCONTACT_SHOW_CAPTCHA_OPT_ALWAYS</option><option value="1">MOD_AJAXCONTACT_SHOW_CAPTCHA_OPT_NOT_LOGGED_IN</option><option value="0">JHIDE</option></field><field name="textfield" type="switch" default="1" label="MOD_AJAXCONTACT_INPUT_MESSAGE_LABEL" description="MOD_AJAXCONTACT_INPUT_MESSAGE_DESC">
+          
+          
+        <option value="1">JSHOW</option><option value="0">JHIDE</option></field><field name="textfield-label" type="text" default="" label="MOD_AJAXCONTACT_TEXT_FIELD_LABEL_LABEL" description="MOD_AJAXCONTACT_TEXT_FIELD_LABEL_DESC"></field><field name="textfield-maxlen" type="text" default="1000" label="MOD_AJAXCONTACT_CHAR_LIMIT_LABEL" description="MOD_AJAXCONTACT_CHAR_LIMIT_DESC"></field><field name="autopopulate" type="radio" default="1" label="MOD_AJAXCONTACT_AUTO_POPULATE_USER_INFO_LABEL" description="MOD_AJAXCONTACT_AUTO_POPULATE_USER_INFO_DESC">
+          
+          
+        <option value="1">JYES</option><option value="0">JNO</option></field><field name="labelType" type="list" default="label" label="MOD_AJAXCONTACT_LABEL_TYPE_LABEL" description="MOD_AJAXCONTACT_LABEL_TYPE_DESC">
+          
+          
+        <option value="label">MOD_AJAXCONTACT_LABEL_TYPE_OPT_LABEL</option><option value="field">MOD_AJAXCONTACT_LABEL_TYPE_OPT_FIELD</option></field><field name="title-redir" type="title" label="MOD_AJAXCONTACT_REDIRECTION_INSTRUCTIONS_LABEL"></field><field name="custom_redirect" type="text" default="" label="MOD_AJAXCONTACT_REDIRECTION_LABEL" description="MOD_AJAXCONTACT_REDIRECTION_DESC"></field></fieldset><fieldset name="custom_fields">
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+      <field name="title-CF" type="title" label="MOD_AJAXCONTACT_CUSTOM_FIELDS_INSTRUCTIONS_LABEL" description="MOD_AJAXCONTACT_CUSTOM_FIELDS_INSTRUCTIONS_DESC"></field><field name="subtitle-cf1" type="title" label="MOD_AJAXCONTACT_CUSTOM_FIELD_TITLE_1_LABEL"></field><field name="cf1" type="customfieldtype" default="name" label="MOD_AJAXCONTACT_CUSTOM_FIELD_TYPE_LABEL" description="MOD_AJAXCONTACT_CUSTOM_FIELD_TYPE_DESC"></field><field name="cf1-label" type="text" default="Enter your name" label="MOD_AJAXCONTACT_CUSTOM_FIELD_LABEL_LABEL" description="MOD_AJAXCONTACT_CUSTOM_FIELD_LABEL_DESC"></field><field name="cf1-value" type="text" default="" label="MOD_AJAXCONTACT_CUSTOM_FIELD_VALUE_LABEL" description="MOD_AJAXCONTACT_CUSTOM_FIELD_VALUE_DESC"></field><field name="cf1-required" type="radio" default="1" label="MOD_AJAXCONTACT_CUSTOM_FIELD_REQUIRED_LABEL" description="MOD_AJAXCONTACT_CUSTOM_FIELD_REQUIRED_DESC">
+          
+          
+        <option value="0">JNO</option><option value="1">JYES</option></field><field name="subtitle-cf2" type="title" label="MOD_AJAXCONTACT_CUSTOM_FIELD_TITLE_2_LABEL"></field><field name="cf2" type="customfieldtype" default="email" label="MOD_AJAXCONTACT_CUSTOM_FIELD_TYPE_LABEL" description="MOD_AJAXCONTACT_CUSTOM_FIELD_TYPE_DESC"></field><field name="cf2-label" type="text" default="Enter your email" label="MOD_AJAXCONTACT_CUSTOM_FIELD_LABEL_LABEL" description="MOD_AJAXCONTACT_CUSTOM_FIELD_LABEL_DESC"></field><field name="cf2-value" type="text" default="" label="MOD_AJAXCONTACT_CUSTOM_FIELD_VALUE_LABEL" description="MOD_AJAXCONTACT_CUSTOM_FIELD_VALUE_DESC"></field><field name="cf2-required" type="radio" default="1" label="MOD_AJAXCONTACT_CUSTOM_FIELD_REQUIRED_LABEL" description="MOD_AJAXCONTACT_CUSTOM_FIELD_REQUIRED_DESC">
+          
+          
+        <option value="0">JNO</option><option value="1">JYES</option></field><field name="subtitle-cf3" type="title" label="MOD_AJAXCONTACT_CUSTOM_FIELD_TITLE_3_LABEL"></field><field name="cf3" type="customfieldtype" default="" label="MOD_AJAXCONTACT_CUSTOM_FIELD_TYPE_LABEL" description="MOD_AJAXCONTACT_CUSTOM_FIELD_TYPE_DESC"></field><field name="cf3-label" type="text" default="Phone Number" label="MOD_AJAXCONTACT_CUSTOM_FIELD_LABEL_LABEL" description="MOD_AJAXCONTACT_CUSTOM_FIELD_LABEL_DESC"></field><field name="cf3-value" type="text" default="" label="MOD_AJAXCONTACT_CUSTOM_FIELD_VALUE_LABEL" description="MOD_AJAXCONTACT_CUSTOM_FIELD_VALUE_DESC"></field><field name="cf3-required" type="radio" default="" label="MOD_AJAXCONTACT_CUSTOM_FIELD_REQUIRED_LABEL" description="MOD_AJAXCONTACT_CUSTOM_FIELD_REQUIRED_DESC">
+          
+          
+        <option value="0">JNO</option><option value="1">JYES</option></field><field name="subtitle-cf4" type="title" label="MOD_AJAXCONTACT_CUSTOM_FIELD_TITLE_4_LABEL"></field><field name="cf4" type="customfieldtype" default="" label="MOD_AJAXCONTACT_CUSTOM_FIELD_TYPE_LABEL" description="MOD_AJAXCONTACT_CUSTOM_FIELD_TYPE_DESC"></field><field name="cf4-label" type="text" default="Preferred Contact Method" label="MOD_AJAXCONTACT_CUSTOM_FIELD_LABEL_LABEL" description="MOD_AJAXCONTACT_CUSTOM_FIELD_LABEL_DESC"></field><field name="cf4-value" type="text" default="Phone|Email" label="MOD_AJAXCONTACT_CUSTOM_FIELD_VALUE_LABEL" description="MOD_AJAXCONTACT_CUSTOM_FIELD_VALUE_DESC"></field><field name="cf4-required" type="radio" default="" label="MOD_AJAXCONTACT_CUSTOM_FIELD_REQUIRED_LABEL" description="MOD_AJAXCONTACT_CUSTOM_FIELD_REQUIRED_DESC">
+          
+          
+        <option value="0">JNO</option><option value="1">JYES</option></field><field name="subtitle-cf5" type="title" label="MOD_AJAXCONTACT_CUSTOM_FIELD_TITLE_5_LABEL"></field><field name="cf5" type="customfieldtype" default="" label="MOD_AJAXCONTACT_CUSTOM_FIELD_TYPE_LABEL" description="MOD_AJAXCONTACT_CUSTOM_FIELD_TYPE_DESC"></field><field name="cf5-label" type="text" default="Preferred Contact Time" label="MOD_AJAXCONTACT_CUSTOM_FIELD_LABEL_LABEL" description="MOD_AJAXCONTACT_CUSTOM_FIELD_LABEL_DESC"></field><field name="cf5-value" type="text" default="Morning|Afternoon|Night" label="MOD_AJAXCONTACT_CUSTOM_FIELD_VALUE_LABEL" description="MOD_AJAXCONTACT_CUSTOM_FIELD_VALUE_DESC"></field><field name="cf5-required" type="radio" default="" label="MOD_AJAXCONTACT_CUSTOM_FIELD_REQUIRED_LABEL" description="MOD_AJAXCONTACT_CUSTOM_FIELD_REQUIRED_DESC">
+          
+          
+        <option value="0">JNO</option><option value="1">JYES</option></field><field name="subtitle-cf6" type="title" label="MOD_AJAXCONTACT_CUSTOM_FIELD_TITLE_6_LABEL"></field><field name="cf6" type="customfieldtype" default="" label="MOD_AJAXCONTACT_CUSTOM_FIELD_TYPE_LABEL" description="MOD_AJAXCONTACT_CUSTOM_FIELD_TYPE_DESC"></field><field name="cf6-label" type="text" default="" label="MOD_AJAXCONTACT_CUSTOM_FIELD_LABEL_LABEL" description="MOD_AJAXCONTACT_CUSTOM_FIELD_LABEL_DESC"></field><field name="cf6-value" type="text" default="" label="MOD_AJAXCONTACT_CUSTOM_FIELD_VALUE_LABEL" description="MOD_AJAXCONTACT_CUSTOM_FIELD_VALUE_DESC"></field><field name="cf6-required" type="radio" default="" label="MOD_AJAXCONTACT_CUSTOM_FIELD_REQUIRED_LABEL" description="MOD_AJAXCONTACT_CUSTOM_FIELD_REQUIRED_DESC">
+          
+          
+        <option value="0">JNO</option><option value="1">JYES</option></field><field name="subtitle-cf7" type="title" label="MOD_AJAXCONTACT_CUSTOM_FIELD_TITLE_7_LABEL"></field><field name="cf7" type="customfieldtype" default="" label="MOD_AJAXCONTACT_CUSTOM_FIELD_TYPE_LABEL" description="MOD_AJAXCONTACT_CUSTOM_FIELD_TYPE_DESC"></field><field name="cf7-label" type="text" default="" label="MOD_AJAXCONTACT_CUSTOM_FIELD_LABEL_LABEL" description="MOD_AJAXCONTACT_CUSTOM_FIELD_LABEL_DESC"></field><field name="cf7-value" type="text" default="" label="MOD_AJAXCONTACT_CUSTOM_FIELD_VALUE_LABEL" description="MOD_AJAXCONTACT_CUSTOM_FIELD_VALUE_DESC"></field><field name="cf7-required" type="radio" default="" label="MOD_AJAXCONTACT_CUSTOM_FIELD_REQUIRED_LABEL" description="MOD_AJAXCONTACT_CUSTOM_FIELD_REQUIRED_DESC">
+          
+          
+        <option value="0">JNO</option><option value="1">JYES</option></field><field name="subtitle-cf8" type="title" label="MOD_AJAXCONTACT_CUSTOM_FIELD_TITLE_8_LABEL"></field><field name="cf8" type="customfieldtype" default="" label="MOD_AJAXCONTACT_CUSTOM_FIELD_TYPE_LABEL" description="MOD_AJAXCONTACT_CUSTOM_FIELD_TYPE_DESC"></field><field name="cf8-label" type="text" default="" label="MOD_AJAXCONTACT_CUSTOM_FIELD_LABEL_LABEL" description="MOD_AJAXCONTACT_CUSTOM_FIELD_LABEL_DESC"></field><field name="cf8-value" type="text" default="" label="MOD_AJAXCONTACT_CUSTOM_FIELD_VALUE_LABEL" description="MOD_AJAXCONTACT_CUSTOM_FIELD_VALUE_DESC"></field><field name="cf8-required" type="radio" default="" label="MOD_AJAXCONTACT_CUSTOM_FIELD_REQUIRED_LABEL" description="MOD_AJAXCONTACT_CUSTOM_FIELD_REQUIRED_DESC">
+          
+          
+        <option value="0">JNO</option><option value="1">JYES</option></field><field name="subtitle-cf9" type="title" label="MOD_AJAXCONTACT_CUSTOM_FIELD_TITLE_9_LABEL"></field><field name="cf9" type="customfieldtype" default="" label="MOD_AJAXCONTACT_CUSTOM_FIELD_TYPE_LABEL" description="MOD_AJAXCONTACT_CUSTOM_FIELD_TYPE_DESC"></field><field name="cf9-label" type="text" default="" label="MOD_AJAXCONTACT_CUSTOM_FIELD_LABEL_LABEL" description="MOD_AJAXCONTACT_CUSTOM_FIELD_LABEL_DESC"></field><field name="cf9-value" type="text" default="" label="MOD_AJAXCONTACT_CUSTOM_FIELD_VALUE_LABEL" description="MOD_AJAXCONTACT_CUSTOM_FIELD_VALUE_DESC"></field><field name="cf9-required" type="radio" default="" label="MOD_AJAXCONTACT_CUSTOM_FIELD_REQUIRED_LABEL" description="MOD_AJAXCONTACT_CUSTOM_FIELD_REQUIRED_DESC">
+          
+          
+        <option value="0">JNO</option><option value="1">JYES</option></field><field name="subtitle-cf10" type="title" label="MOD_AJAXCONTACT_CUSTOM_FIELD_TITLE_10_LABEL"></field><field name="cf10" type="customfieldtype" default="" label="MOD_AJAXCONTACT_CUSTOM_FIELD_TYPE_LABEL" description="MOD_AJAXCONTACT_CUSTOM_FIELD_TYPE_DESC"></field><field name="cf10-label" type="text" default="" label="MOD_AJAXCONTACT_CUSTOM_FIELD_LABEL_LABEL" description="MOD_AJAXCONTACT_CUSTOM_FIELD_LABEL_DESC"></field><field name="cf10-value" type="text" default="" label="MOD_AJAXCONTACT_CUSTOM_FIELD_VALUE_LABEL" description="MOD_AJAXCONTACT_CUSTOM_FIELD_VALUE_DESC"></field><field name="cf10-required" type="radio" default="" label="MOD_AJAXCONTACT_CUSTOM_FIELD_REQUIRED_LABEL" description="MOD_AJAXCONTACT_CUSTOM_FIELD_REQUIRED_DESC">
+          
+          
+        <option value="0">JNO</option><option value="1">JYES</option></field><field name="subtitle-cf11" type="title" label="MOD_AJAXCONTACT_CUSTOM_FIELD_TITLE_11_LABEL"></field><field name="cf11" type="customfieldtype" default="" label="MOD_AJAXCONTACT_CUSTOM_FIELD_TYPE_LABEL" description="MOD_AJAXCONTACT_CUSTOM_FIELD_TYPE_DESC"></field><field name="cf11-label" type="text" default="" label="MOD_AJAXCONTACT_CUSTOM_FIELD_LABEL_LABEL" description="MOD_AJAXCONTACT_CUSTOM_FIELD_LABEL_DESC"></field><field name="cf11-value" type="text" default="" label="MOD_AJAXCONTACT_CUSTOM_FIELD_VALUE_LABEL" description="MOD_AJAXCONTACT_CUSTOM_FIELD_VALUE_DESC"></field><field name="cf11-required" type="radio" default="" label="MOD_AJAXCONTACT_CUSTOM_FIELD_REQUIRED_LABEL" description="MOD_AJAXCONTACT_CUSTOM_FIELD_REQUIRED_DESC">
+          
+          
+        <option value="0">JNO</option><option value="1">JYES</option></field><field name="subtitle-cf12" type="title" label="MOD_AJAXCONTACT_CUSTOM_FIELD_TITLE_12_LABEL"></field><field name="cf12" type="customfieldtype" default="" label="MOD_AJAXCONTACT_CUSTOM_FIELD_TYPE_LABEL" description="MOD_AJAXCONTACT_CUSTOM_FIELD_TYPE_DESC"></field><field name="cf12-label" type="text" default="" label="MOD_AJAXCONTACT_CUSTOM_FIELD_LABEL_LABEL" description="MOD_AJAXCONTACT_CUSTOM_FIELD_LABEL_DESC"></field><field name="cf12-value" type="text" default="" label="MOD_AJAXCONTACT_CUSTOM_FIELD_VALUE_LABEL" description="MOD_AJAXCONTACT_CUSTOM_FIELD_VALUE_DESC"></field><field name="cf12-required" type="radio" default="" label="MOD_AJAXCONTACT_CUSTOM_FIELD_REQUIRED_LABEL" description="MOD_AJAXCONTACT_CUSTOM_FIELD_REQUIRED_DESC">
+          
+          
+        <option value="0">JNO</option><option value="1">JYES</option></field><field name="subtitle-cf13" type="title" label="MOD_AJAXCONTACT_CUSTOM_FIELD_TITLE_13_LABEL"></field><field name="cf13" type="customfieldtype" default="" label="MOD_AJAXCONTACT_CUSTOM_FIELD_TYPE_LABEL" description="MOD_AJAXCONTACT_CUSTOM_FIELD_TYPE_DESC"></field><field name="cf13-label" type="text" default="" label="MOD_AJAXCONTACT_CUSTOM_FIELD_LABEL_LABEL" description="MOD_AJAXCONTACT_CUSTOM_FIELD_LABEL_DESC"></field><field name="cf13-value" type="text" default="" label="MOD_AJAXCONTACT_CUSTOM_FIELD_VALUE_LABEL" description="MOD_AJAXCONTACT_CUSTOM_FIELD_VALUE_DESC"></field><field name="cf13-required" type="radio" default="" label="MOD_AJAXCONTACT_CUSTOM_FIELD_REQUIRED_LABEL" description="MOD_AJAXCONTACT_CUSTOM_FIELD_REQUIRED_DESC">
+          
+          
+        <option value="0">JNO</option><option value="1">JYES</option></field><field name="subtitle-cf14" type="title" label="MOD_AJAXCONTACT_CUSTOM_FIELD_TITLE_14_LABEL"></field><field name="cf14" type="customfieldtype" default="" label="MOD_AJAXCONTACT_CUSTOM_FIELD_TYPE_LABEL" description="MOD_AJAXCONTACT_CUSTOM_FIELD_TYPE_DESC"></field><field name="cf14-label" type="text" default="" label="MOD_AJAXCONTACT_CUSTOM_FIELD_LABEL_LABEL" description="MOD_AJAXCONTACT_CUSTOM_FIELD_LABEL_DESC"></field><field name="cf14-value" type="text" default="" label="MOD_AJAXCONTACT_CUSTOM_FIELD_VALUE_LABEL" description="MOD_AJAXCONTACT_CUSTOM_FIELD_VALUE_DESC"></field><field name="cf14-required" type="radio" default="" label="MOD_AJAXCONTACT_CUSTOM_FIELD_REQUIRED_LABEL" description="MOD_AJAXCONTACT_CUSTOM_FIELD_REQUIRED_DESC">
+          
+          
+        <option value="0">JNO</option><option value="1">JYES</option></field><field name="subtitle-cf15" type="title" label="MOD_AJAXCONTACT_CUSTOM_FIELD_TITLE_15_LABEL"></field><field name="cf15" type="customfieldtype" default="" label="MOD_AJAXCONTACT_CUSTOM_FIELD_TYPE_LABEL" description="MOD_AJAXCONTACT_CUSTOM_FIELD_TYPE_DESC"></field><field name="cf15-label" type="text" default="" label="MOD_AJAXCONTACT_CUSTOM_FIELD_LABEL_LABEL" description="MOD_AJAXCONTACT_CUSTOM_FIELD_LABEL_DESC"></field><field name="cf15-value" type="text" default="" label="MOD_AJAXCONTACT_CUSTOM_FIELD_VALUE_LABEL" description="MOD_AJAXCONTACT_CUSTOM_FIELD_VALUE_DESC"></field><field name="cf15-required" type="radio" default="" label="MOD_AJAXCONTACT_CUSTOM_FIELD_REQUIRED_LABEL" description="MOD_AJAXCONTACT_CUSTOM_FIELD_REQUIRED_DESC">
+          
+          
+        <option value="0">JNO</option><option value="1">JYES</option></field><field name="subtitle-cf16" type="title" label="MOD_AJAXCONTACT_CUSTOM_FIELD_TITLE_16_LABEL"></field><field name="cf16" type="customfieldtype" default="" label="MOD_AJAXCONTACT_CUSTOM_FIELD_TYPE_LABEL" description="MOD_AJAXCONTACT_CUSTOM_FIELD_TYPE_DESC"></field><field name="cf16-label" type="text" default="" label="MOD_AJAXCONTACT_CUSTOM_FIELD_LABEL_LABEL" description="MOD_AJAXCONTACT_CUSTOM_FIELD_LABEL_DESC"></field><field name="cf16-value" type="text" default="" label="MOD_AJAXCONTACT_CUSTOM_FIELD_VALUE_LABEL" description="MOD_AJAXCONTACT_CUSTOM_FIELD_VALUE_DESC"></field><field name="cf16-required" type="radio" default="" label="MOD_AJAXCONTACT_CUSTOM_FIELD_REQUIRED_LABEL" description="MOD_AJAXCONTACT_CUSTOM_FIELD_REQUIRED_DESC">
+          
+          
+        <option value="0">JNO</option><option value="1">JYES</option></field><field name="subtitle-cf17" type="title" label="MOD_AJAXCONTACT_CUSTOM_FIELD_TITLE_17_LABEL"></field><field name="cf17" type="customfieldtype" default="" label="MOD_AJAXCONTACT_CUSTOM_FIELD_TYPE_LABEL" description="MOD_AJAXCONTACT_CUSTOM_FIELD_TYPE_DESC"></field><field name="cf17-label" type="text" default="" label="MOD_AJAXCONTACT_CUSTOM_FIELD_LABEL_LABEL" description="MOD_AJAXCONTACT_CUSTOM_FIELD_LABEL_DESC"></field><field name="cf17-value" type="text" default="" label="MOD_AJAXCONTACT_CUSTOM_FIELD_VALUE_LABEL" description="MOD_AJAXCONTACT_CUSTOM_VALUE_LABEL_DESC"></field><field name="cf17-required" type="radio" default="" label="MOD_AJAXCONTACT_CUSTOM_FIELD_REQUIRED_LABEL" description="MOD_AJAXCONTACT_CUSTOM_FIELD_REQUIRED_DESC">
+          
+          
+        <option value="0">JNO</option><option value="1">JYES</option></field><field name="subtitle-cf18" type="title" label="MOD_AJAXCONTACT_CUSTOM_FIELD_TITLE_18_LABEL"></field><field name="cf18" type="customfieldtype" default="" label="MOD_AJAXCONTACT_CUSTOM_FIELD_TYPE_LABEL" description="MOD_AJAXCONTACT_CUSTOM_FIELD_TYPE_DESC"></field><field name="cf18-label" type="text" default="" label="MOD_AJAXCONTACT_CUSTOM_FIELD_LABEL_LABEL" description="MOD_AJAXCONTACT_CUSTOM_FIELD_LABEL_DESC"></field><field name="cf18-value" type="text" default="" label="MOD_AJAXCONTACT_CUSTOM_FIELD_VALUE_LABEL" description="MOD_AJAXCONTACT_CUSTOM_FIELD_VALUE_DESC"></field><field name="cf18-required" type="radio" default="" label="MOD_AJAXCONTACT_CUSTOM_FIELD_REQUIRED_LABEL" description="MOD_AJAXCONTACT_CUSTOM_FIELD_REQUIRED_DESC">
+          
+          
+        <option value="0">JNO</option><option value="1">JYES</option></field><field name="subtitle-cf19" type="title" label="MOD_AJAXCONTACT_CUSTOM_FIELD_TITLE_19_LABEL"></field><field name="cf19" type="customfieldtype" default="" label="MOD_AJAXCONTACT_CUSTOM_FIELD_TYPE_LABEL" description="MOD_AJAXCONTACT_CUSTOM_FIELD_TYPE_DESC"></field><field name="cf19-label" type="text" default="" label="MOD_AJAXCONTACT_CUSTOM_FIELD_LABEL_LABEL" description="MOD_AJAXCONTACT_CUSTOM_FIELD_LABEL_DESC"></field><field name="cf19-value" type="text" default="" label="MOD_AJAXCONTACT_CUSTOM_FIELD_VALUE_LABEL" description="MOD_AJAXCONTACT_CUSTOM_FIELD_VALUE_DESC"></field><field name="cf19-required" type="radio" default="" label="MOD_AJAXCONTACT_CUSTOM_FIELD_REQUIRED_LABEL" description="MOD_AJAXCONTACT_CUSTOM_FIELD_REQUIRED_DESC">
+          
+          
+        <option value="0">JNO</option><option value="1">JYES</option></field><field name="subtitle-cf20" type="title" label="MOD_AJAXCONTACT_CUSTOM_FIELD_TITLE_20_LABEL"></field><field name="cf20" type="customfieldtype" default="" label="MOD_AJAXCONTACT_CUSTOM_FIELD_TYPE_LABEL" description="MOD_AJAXCONTACT_CUSTOM_FIELD_TYPE_DESC"></field><field name="cf20-label" type="text" default="" label="MOD_AJAXCONTACT_CUSTOM_FIELD_LABEL_LABEL" description="MOD_AJAXCONTACT_CUSTOM_FIELD_LABEL_DESC"></field><field name="cf20-value" type="text" default="" label="MOD_AJAXCONTACT_CUSTOM_FIELD_VALUE_LABEL" description="MOD_AJAXCONTACT_CUSTOM_FIELD_VALUE_DESC"></field><field name="cf20-required" type="radio" default="" label="MOD_AJAXCONTACT_CUSTOM_FIELD_REQUIRED_LABEL" description="MOD_AJAXCONTACT_CUSTOM_FIELD_REQUIRED_DESC">
+          
+          
+        <option value="0">JNO</option><option value="1">JYES</option></field></fieldset><fieldset name="other">
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+      <field name="layout" type="modulelayout" label="JFIELD_ALT_LAYOUT_LABEL" description="JFIELD_ALT_MODULE_LAYOUT_DESC"></field><field name="moduleclass_sfx" type="text" label="COM_MODULES_FIELD_MODULECLASS_SFX_LABEL" description="COM_MODULES_FIELD_MODULECLASS_SFX_DESC"></field><field name="cache" type="list" default="1" label="COM_MODULES_FIELD_CACHING_LABEL" description="COM_MODULES_FIELD_CACHING_DESC">
+          
+          
+        <option value="1">JGLOBAL_USE_GLOBAL</option><option value="0">COM_MODULES_FIELD_VALUE_NOCACHING</option></field><field name="cache_time" type="text" default="900" label="COM_MODULES_FIELD_CACHE_TIME_LABEL" description="COM_MODULES_FIELD_CACHE_TIME_DESC"></field><field name="cachemode" type="hidden" default="static">
+          
+        <option value="static"></option></field><field name="title-copy" type="title" label="MOD_AJAXCONTACT_COPY_MESSAGE_TITLE_LABEL" description="MOD_AJAXCONTACT_COPY_MESSAGE_TITLE_DESC"></field><field name="copymsg" type="switch" default="0" label="MOD_AJAXCONTACT_COPY_MESSAGE_LABEL" description="MOD_AJAXCONTACT_COPY_MESSAGE_DESC">
+          
+          
+        <option value="1">JYES</option><option value="0">JNO</option></field><field name="copymsg-pretext" type="textarea" cols="45" rows="3" label="MOD_AJAXCONTACT_COPY_MESSAGE_PRETEXT_LABEL" default="This is a copy of the following message sent by %s via %s (%s)" description="MOD_AJAXCONTACT_COPY_MESSAGE_PRETEXT_DESC"></field><field name="copymsg-subject" type="text" default="Copy of: %s" label="MOD_AJAXCONTACT_COPY_MESSAGE_SUBJECT_LABEL" description="MOD_AJAXCONTACT_COPY_MESSAGE_SUBJECT_DESC"></field><field name="copymsg-signature" type="textarea" cols="45" rows="3" default="" label="MOD_AJAXCONTACT_COPY_MESSAGE_SIGNATURE_LABEL" description="MOD_AJAXCONTACT_COPY_MESSAGE_SIGNATURE_DESC"></field><field name="title-gc" type="title" label="MOD_AJAXCONTACT_CONVERSION_TITLE_LABEL" description="MOD_AJAXCONTACT_CONVERSION_TITLE_DESC"></field><field name="conversion" type="switch" default="0" label="MOD_AJAXCONTACT_CONVERSION_LABEL" description="MOD_AJAXCONTACT_CONVERSION_DESC">
+          
+          
+        <option value="0">No</option><option value="google">Yes</option></field><field name="conversion-google-security" type="radio" default="0" label="MOD_AJAXCONTACT_CONVERSION_SECURITY_LABEL" description="MOD_AJAXCONTACT_CONVERSION_SECURITY_DESC">
+          
+          
+        <option value="http">HTTP</option><option value="https">HTTPS</option></field><field name="conversion-google-id" type="text" default="" label="MOD_AJAXCONTACT_CONVERSION_ID_LABEL" description="MOD_AJAXCONTACT_CONVERSION_ID_DESC"></field><field name="conversion-google-language" type="text" default="en_GB" label="MOD_AJAXCONTACT_CONVERSION_LANGUAGE_LABEL" description="MOD_AJAXCONTACT_CONVERSION_LANGUAGE_DESC"></field><field name="conversion-google-format" type="text" default="1" label="MOD_AJAXCONTACT_CONVERSION_FORMAT_LABEL" description="MOD_AJAXCONTACT_CONVERSION_FORMAT_DESC"></field><field name="conversion-google-color" type="text" default="FFFFFF" label="MOD_AJAXCONTACT_CONVERSION_COLOR_LABEL" description="MOD_AJAXCONTACT_CONVERSION_COLOR_DESC"></field><field name="conversion-google-label" type="text" default="" label="MOD_AJAXCONTACT_CONVERSION_LABEL_LABEL" description="MOD_AJAXCONTACT_CONVERSION_LABEL_DESC"></field><field name="conversion-google-value" type="text" default="0" label="MOD_AJAXCONTACT_CONVERSION_VALUE_LABEL" description="MOD_AJAXCONTACT_CONVERSION_VALUE_DESC"></field><field name="title-fix" type="title" label="MOD_AJAXCONTACT_FIX_TITLE_LABEL" description="MOD_AJAXCONTACT_FIX_TITLE_DESC"></field><field name="fix" type="switch" default="0" label="MOD_AJAXCONTACT_FIX_LABEL" description="MOD_AJAXCONTACT_FIX_DESC">
+          
+          
+        <option value="0">JYES</option><option value="1">JNO</option></field><field name="fix-hide_char_count_from_ie" type="radio" default="0" label="MOD_AJAXCONTACT_FIX_HIDE_CHARACTERS_LIMIT_FROM_IE_LABEL" description="MOD_AJAXCONTACT_FIX_HIDE_CHARACTERS_LIMIT_FROM_IE_DESC">
+          
+          
+        <option value="1">JYES</option><option value="0">JNO</option></field><field name="fix-usemultipleforms" type="radio" default="0" label="MOD_AJAXCONTACT_FIX_USE_MULTIPLE_FORMS_LABEL" description="MOD_AJAXCONTACT_FIX_USE_MULTIPLE_FORMS_DESC">
+          
+          
+        <option value="1">JYES</option><option value="0">JNO</option></field><field name="fix-message-display-method" type="radio" default="inline" label="MOD_AJAXCONTACT_FIX_MESSAGE_DISPLAY_METHOD_LABEL" description="MOD_AJAXCONTACT_FIX_MESSAGE_DISPLAY_METHOD_DESC">
+          
+          
+        <option value="alert">MOD_AJAXCONTACT_FIX_MESSAGE_DISPLAY_METHOD_OPT_ALERT</option><option value="inline">MOD_AJAXCONTACT_FIX_MESSAGE_DISPLAY_METHOD_OPT_INLINE</option></field><field name="fix-site_domain" type="text" default="" label="MOD_AJAXCONTACT_FIX_SITE_DOMAIN_LABEL" description="MOD_AJAXCONTACT_FIX_SITE_DOMAIN_DESC"></field><field name="fix-useajax" type="radio" default="1" label="MOD_AJAXCONTACT_FIX_USE_AJAX_LABEL" description="MOD_AJAXCONTACT_FIX_USE_AJAX_DESC">
+          
+          
+        <option value="1">JYES</option><option value="0">JNO</option></field></fieldset><fieldset name="help">
+        
+        
+      <field name="Translation-title" type="title" label="MOD_AJAXCONTACT_HELP_TRANSLATION_LABEL" description="MOD_AJAXCONTACT_HELP_TRANSLATION_DESC"></field><field name="stylin-title" type="title" label="MOD_AJAXCONTACT_HELP_STYLING_LABEL" description="MOD_AJAXCONTACT_HELP_STYLING_DESC"></field></fieldset></fields>
+  </config>
+</extension>

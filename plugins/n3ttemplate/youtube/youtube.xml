@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="plugin" version="1.6.0" group="n3ttemplate" method="upgrade">
+	<name>PLG_N3TTEMPLATE_YOUTUBE_MANIFEST_NAME</name>
+	<creationDate>2011-08-08</creationDate>
+	<author>Pavel Poles - n3t.cz</author>
+	<authorEmail></authorEmail>
+	<authorUrl>joomlacode.org/gf/project/n3t</authorUrl>
+	<copyright>(c) 2010-2012 Pavel Poles - n3t.cz. All rights reserved.</copyright>
+	<license>GNU/GPLv3 http://www.gnu.org/licenses/gpl-3.0.html</license>
+	<version>1.7.6</version>
+	<description>PLG_N3TTEMPLATE_YOUTUBE_MANIFEST_DESCRIPTION</description>
+	<files>
+		<filename plugin="youtube">youtube.php</filename>
+		<filename>index.html</filename>
+	</files>
+	<languages folder="languages.j16">
+		<language tag="cs-CZ">cs-CZ.plg_n3ttemplate_youtube.ini</language>
+		<language tag="cs-CZ">cs-CZ.plg_n3ttemplate_youtube.sys.ini</language>
+		<language tag="de-DE">de-DE.plg_n3ttemplate_youtube.ini</language>
+		<language tag="de-DE">de-DE.plg_n3ttemplate_youtube.sys.ini</language>
+		<language tag="en-GB">en-GB.plg_n3ttemplate_youtube.ini</language>
+		<language tag="en-GB">en-GB.plg_n3ttemplate_youtube.sys.ini</language>
+	</languages>
+	<config>
+	  <fields name="params">
+    	<fieldset name="general" label="PLG_N3TTEMPLATE_YOUTUBE_CFG_GENERAL_SETTINGS" description="">
+    	  <field name="source" type="list" default="standard_feed" label="PLG_N3TTEMPLATE_YOUTUBE_CFG_SOURCE" description="PLG_N3TTEMPLATE_YOUTUBE_CFG_SOURCE_DESC">
+    			<option value="standard_feed">PLG_N3TTEMPLATE_YOUTUBE_CFG_SOURCE_STANDARD_FEED</option>
+    			<option value="user_uploads">PLG_N3TTEMPLATE_YOUTUBE_CFG_SOURCE_USER_UPLOADS</option>
+    			<option value="user_favorites">PLG_N3TTEMPLATE_YOUTUBE_CFG_SOURCE_USER_FAVORITES</option>
+    			<option value="playlist">PLG_N3TTEMPLATE_YOUTUBE_CFG_SOURCE_PLAYLIST</option>
+    		</field>    	  
+    		<field name="standard_feed_mode" type="list" default="top_rated" label="PLG_N3TTEMPLATE_YOUTUBE_CFG_STANDARD_FEED_MODE" description="PLG_N3TTEMPLATE_YOUTUBE_CFG_STANDARD_FEED_MODE_DESC">
+    			<option value="top_rated">PLG_N3TTEMPLATE_YOUTUBE_CFG_STANDARD_FEED_MODE_TOP_RATED</option>
+    			<option value="top_favorites">PLG_N3TTEMPLATE_YOUTUBE_CFG_STANDARD_FEED_MODE_TOP_FAVORITES</option>
+    			<option value="most_viewed">PLG_N3TTEMPLATE_YOUTUBE_CFG_STANDARD_FEED_MODE_MOST_VIEWED</option>
+    			<option value="most_shared">PLG_N3TTEMPLATE_YOUTUBE_CFG_STANDARD_FEED_MODE_MOST_SHARED</option>
+    			<option value="most_popular">PLG_N3TTEMPLATE_YOUTUBE_CFG_STANDARD_FEED_MODE_MOST_POPULAR</option>
+    			<option value="most_recent">PLG_N3TTEMPLATE_YOUTUBE_CFG_STANDARD_FEED_MODE_MOST_RECENT</option>
+    			<option value="most_discussed">PLG_N3TTEMPLATE_YOUTUBE_CFG_STANDARD_FEED_MODE_MOST_DISCUSSED</option>
+    			<option value="most_responded">PLG_N3TTEMPLATE_YOUTUBE_CFG_STANDARD_FEED_MODE_MOST_RESPONDED</option>
+    			<option value="recently_featured">PLG_N3TTEMPLATE_YOUTUBE_CFG_STANDARD_FEED_MODE_RECENTLY_FEATURED</option>
+    			<option value="on_the_web">PLG_N3TTEMPLATE_YOUTUBE_CFG_STANDARD_FEED_MODE_ON_THE_WEB</option>
+    		</field>
+    	  <field name="region" type="list" default="" label="PLG_N3TTEMPLATE_YOUTUBE_CFG_REGION" description="PLG_N3TTEMPLATE_YOUTUBE_CFG_REGION_DESC">
+    			<option value="">PLG_N3TTEMPLATE_YOUTUBE_CFG_REGION_ALL_REGIONS</option>
+          <option value="AR">Argentina</option>
+          <option value="AU">Australia</option>
+          <option value="BR">Brazil</option>
+          <option value="CA">Canada</option>
+          <option value="CZ">Czech Republic</option>
+          <option value="FR">France</option>
+          <option value="DE">Germany</option>
+          <option value="GB">Great Britain</option>
+          <option value="HK">Hong Kong</option>
+          <option value="IN">India</option>
+          <option value="IE">Ireland</option>
+          <option value="IL">Israel</option>
+          <option value="IT">Italy</option>
+          <option value="JP">Japan</option>
+          <option value="MX">Mexico</option>
+          <option value="NL">Netherlands</option>
+          <option value="NZ">New Zealand</option>
+          <option value="PL">Poland</option>
+          <option value="RU">Russia</option>
+          <option value="ZA">South Africa</option>
+          <option value="KR">South Korea</option>
+          <option value="ES">Spain</option>
+          <option value="SE">Sweden</option>
+          <option value="TW">Taiwan</option>
+          <option value="US">United States</option>
+    		</field>
+    	  <field name="category" type="list" default="" label="PLG_N3TTEMPLATE_YOUTUBE_CFG_CATEGORY" description="PLG_N3TTEMPLATE_YOUTUBE_CFG_CATEGORY_DESC">
+    			<option value="">PLG_N3TTEMPLATE_YOUTUBE_CFG_CATEGORY_ALL_CATEGORIES</option>
+          <option value="Film">PLG_N3TTEMPLATE_YOUTUBE_CFG_CATEGORY_FILM_AND_ANIMATION</option>
+          <option value="Autos">PLG_N3TTEMPLATE_YOUTUBE_CFG_CATEGORY_AUTOS_AND_VEHICLES</option>
+          <option value="Music">PLG_N3TTEMPLATE_YOUTUBE_CFG_CATEGORY_MUSIC</option>
+          <option value="Animals">PLG_N3TTEMPLATE_YOUTUBE_CFG_CATEGORY_PETS_AND_ANIMALS</option>
+          <option value="Sports">PLG_N3TTEMPLATE_YOUTUBE_CFG_CATEGORY_SPORTS</option>
+          <option value="Travel">PLG_N3TTEMPLATE_YOUTUBE_CFG_CATEGORY_TRAVEL_AND_EVENTS</option>
+          <option value="Games">PLG_N3TTEMPLATE_YOUTUBE_CFG_CATEGORY_GAMING</option>
+          <option value="Comedy">PLG_N3TTEMPLATE_YOUTUBE_CFG_CATEGORY_COMEDY</option>
+          <option value="People">PLG_N3TTEMPLATE_YOUTUBE_CFG_CATEGORY_PEOPLE_AND_BLOGS</option>
+          <option value="News">PLG_N3TTEMPLATE_YOUTUBE_CFG_CATEGORY_NEWS_AND_POLITICS</option>
+          <option value="Entertainment">PLG_N3TTEMPLATE_YOUTUBE_CFG_CATEGORY_ENTERTAINMENT</option>
+          <option value="Education">PLG_N3TTEMPLATE_YOUTUBE_CFG_CATEGORY_EDUCATION</option>
+          <option value="Howto">PLG_N3TTEMPLATE_YOUTUBE_CFG_CATEGORY_HOWTO_AND_STYLE</option>
+          <option value="Nonprofit">PLG_N3TTEMPLATE_YOUTUBE_CFG_CATEGORY_NONPROFITS_AND_ACTIVISM</option>
+          <option value="Tech">PLG_N3TTEMPLATE_YOUTUBE_CFG_CATEGORY_SCIENCE_AND_TECHNOLOGY</option>    			
+    		</field>            	  
+    		<field name="user" type="text" default="" label="PLG_N3TTEMPLATE_YOUTUBE_CFG_USER" description="PLG_N3TTEMPLATE_YOUTUBE_CFG_USER_DESC" size="50" />    		
+    		<field name="playlist" type="text" default="" label="PLG_N3TTEMPLATE_YOUTUBE_CFG_PLAYLIST" description="PLG_N3TTEMPLATE_YOUTUBE_CFG_PLAYLIST_DESC" size="50" />
+    		<field name="max_results" type="text" default="25" label="PLG_N3TTEMPLATE_YOUTUBE_CFG_MAX_RESULTS" description="PLG_N3TTEMPLATE_YOUTUBE_CFG_MAX_RESULTS_DESC" size="10" />
+    	  <field name="format" type="list" default="" label="PLG_N3TTEMPLATE_YOUTUBE_CFG_FORMAT" description="PLG_N3TTEMPLATE_YOUTUBE_CFG_FORMAT_DESC">
+    			<option value="">PLG_N3TTEMPLATE_YOUTUBE_CFG_FORMAT_ALL</option>
+    			<option value="1">PLG_N3TTEMPLATE_YOUTUBE_CFG_FORMAT_1</option>
+    			<option value="5">PLG_N3TTEMPLATE_YOUTUBE_CFG_FORMAT_5</option>    		
+    			<option value="6">PLG_N3TTEMPLATE_YOUTUBE_CFG_FORMAT_6</option>
+    		</field>
+      </fieldset>
+      <fieldset name="output" label="PLG_N3TTEMPLATE_YOUTUBE_CFG_OUTPUT_SETTINGS" description="PLG_N3TTEMPLATE_YOUTUBE_CFG_OUTPUT_SETTINGS_DESC">
+    	  <field name="output" type="list" default="link" label="PLG_N3TTEMPLATE_YOUTUBE_CFG_OUTPUT" description="PLG_N3TTEMPLATE_YOUTUBE_CFG_OUTPUT_DESC">    			
+    			<option value="link">PLG_N3TTEMPLATE_YOUTUBE_CFG_OUTPUT_LINK</option>
+    			<option value="bigpreview">PLG_N3TTEMPLATE_YOUTUBE_CFG_OUTPUT_BIGPREVIEW</option>
+    			<option value="smallpreview">PLG_N3TTEMPLATE_YOUTUBE_CFG_OUTPUT_SMALLPREVIEW</option>
+    			<option value="jw_allvideo">PLG_N3TTEMPLATE_YOUTUBE_CFG_OUTPUT_JW_ALLVIDEO</option>
+    			<option value="custom">PLG_N3TTEMPLATE_YOUTUBE_CFG_OUTPUT_CUSTOM</option>
+    		</field>
+        <field name="custom_output" type="textarea" default="" label="PLG_N3TTEMPLATE_YOUTUBE_CFG_CUSTOM_OUTPUT" description="PLG_N3TTEMPLATE_YOUTUBE_CFG_CUSTOM_OUTPUT_DESC" rows="10" cols="35" />            	  
+      </fieldset>
+	  </fields>
+	</config>  	
+</extension>

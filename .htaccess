@@ -1,0 +1,120 @@
+##
+# @package		Joomla
+# @copyright	Copyright (C) 2005 - 2012 Open Source Matters. All rights reserved.
+# @license		GNU General Public License version 2 or later; see LICENSE.txt
+##
+
+##
+# READ THIS COMPLETELY IF YOU CHOOSE TO USE THIS FILE!
+#
+# The line just below this section: 'Options +FollowSymLinks' may cause problems
+# with some server configurations.  It is required for use of mod_rewrite, but may already
+# be set by your server administrator in a way that dissallows changing it in
+# your .htaccess file.  If using it causes your server to error out, comment it out (add # to
+# beginning of line), reload your site in your browser and test your sef url's.  If they work,
+# it has been set by your server administrator and you do not need it set here.
+##
+
+## Can be commented out if causes errors, see notes above.
+Options +FollowSymLinks
+
+## Mod_rewrite in use.
+
+RewriteEngine On
+
+## Begin - Rewrite rules to block out some common exploits.
+# If you experience problems on your site block out the operations listed below
+# This attempts to block the most common type of exploit `attempts` to Joomla!
+#
+# Block out any script trying to base64_encode data within the URL.
+RewriteCond %{QUERY_STRING} base64_encode[^(]*\([^)]*\) [OR]
+# Block out any script that includes a <script> tag in URL.
+RewriteCond %{QUERY_STRING} (<|%3C)([^s]*s)+cript.*(>|%3E) [NC,OR]
+# Block out any script trying to set a PHP GLOBALS variable via URL.
+RewriteCond %{QUERY_STRING} GLOBALS(=|\[|\%[0-9A-Z]{0,2}) [OR]
+# Block out any script trying to modify a _REQUEST variable via URL.
+RewriteCond %{QUERY_STRING} _REQUEST(=|\[|\%[0-9A-Z]{0,2})
+# Return 403 Forbidden header and show the content of the root homepage
+RewriteRule .* index.php [F]
+#
+## End - Rewrite rules to block out some common exploits.
+
+## Begin - Custom redirects
+#
+# If you need to redirect some pages, or set a canonical non-www to
+# www redirect (or vice versa), place that code here. Ensure those
+# redirects use the correct RewriteRule syntax and the [R=301,L] flags.
+#
+## End - Custom redirects
+
+##
+# Uncomment following line if your webserver's URL
+# is not directly related to physical file paths.
+# Update Your Joomla! Directory (just / for root).
+##
+
+RewriteBase /
+
+###########################Redirects###############################
+
+
+Redirect /baner http://www.baj.co.il/baner.htm
+Redirect /english http://baj.co.il/the-jaffa-tel-aviv-assembly
+Redirect /links http://baj.co.il/%D7%A7%D7%99%D7%A9%D7%95%D7%A8%D7%99%D7%9D
+Redirect /address http://baj.co.il/%D7%9B%D7%99%D7%A6%D7%93-%D7%9C%D7%94%D7%92%D7%99%D7%A2
+Redirect /meetings http://baj.co.il/%D7%96%D7%9E%D7%A0%D7%99-%D7%90%D7%A1%D7%99%D7%A4%D7%95%D7%AA
+Redirect /events http://baj.co.il/%D7%9C%D7%95%D7%97-%D7%90%D7%A8%D7%95%D7%A2%D7%99%D7%9D
+Redirect /contact http://baj.co.il/%D7%A6%D7%95%D7%A8-%D7%A7%D7%A9%D7%A8
+Redirect /movie http://baj.co.il/%D7%A6%D7%A4%D7%99%D7%99%D7%94-%D7%91%D7%A1%D7%A8%D7%98-%D7%99%D7%A9%D7%95%D7%A2
+Redirect /reading http://baj.co.il/%D7%A7%D7%98%D7%A2%D7%99%D7%9D-%D7%9E%D7%94%D7%91%D7%A8%D7%99%D7%AA-%D7%94%D7%97%D7%93%D7%A9%D7%94
+Redirect /article http://baj.co.il/%D7%A7%D7%A8%D7%99%D7%90%D7%AA-%D7%9E%D7%90%D7%9E%D7%A8%D7%99%D7%9D-%D7%95%D7%94%D7%90%D7%96%D7%A0%D7%94-%D7%9C%D7%93%D7%A8%D7%A9%D7%95%D7%AA/%D7%A7%D7%A8%D7%99%D7%90%D7%AA-%D7%9E%D7%90%D7%9E%D7%A8%D7%99%D7%9D
+Redirect /prophecy http://baj.co.il/%D7%A0%D7%91%D7%95%D7%90%D7%95%D7%AA-%D7%95%D7%94%D7%AA%D7%92%D7%A9%D7%9E%D7%95%D7%AA%D7%9F
+Redirect /question http://baj.co.il/%D7%A9%D7%90%D7%9C%D7%95%D7%AA-%D7%95%D7%AA%D7%A9%D7%95%D7%91%D7%95%D7%AA
+Redirect /books http://baj.co.il/free-books
+Redirect /testimony http://baj.co.il/%D7%A2%D7%93%D7%95%D7%99%D7%95%D7%AA
+#Redirect /pictures http://www.baj.co.il
+Redirect /sure1 http://baj.co.il/%D7%A7%D7%A8%D7%99%D7%90%D7%AA-%D7%9E%D7%90%D7%9E%D7%A8%D7%99%D7%9D-%D7%95%D7%94%D7%90%D7%96%D7%A0%D7%94-%D7%9C%D7%93%D7%A8%D7%A9%D7%95%D7%AA/%D7%A6%D7%A4%D7%99%D7%99%D7%94-%D7%91%D7%93%D7%A8%D7%A9%D7%95%D7%AA/139-%D7%9C%D7%94%D7%99%D7%95%D7%AA-%D7%91%D7%98%D7%95%D7%97-%D7%A9%D7%90%D7%9B%D7%A0%D7%A1-%D7%9C%D7%92%D7%9F-%D7%A2%D7%93%D7%9F-%D7%97%D7%9C%D7%A7-1
+Redirect /article/sermon-viewing http://baj.co.il/%D7%A7%D7%A8%D7%99%D7%90%D7%AA-%D7%9E%D7%90%D7%9E%D7%A8%D7%99%D7%9D-%D7%95%D7%94%D7%90%D7%96%D7%A0%D7%94-%D7%9C%D7%93%D7%A8%D7%A9%D7%95%D7%AA/%D7%A6%D7%A4%D7%99%D7%99%D7%94-%D7%91%D7%93%D7%A8%D7%A9%D7%95%D7%AA
+Redirect /dvd http://www.baj.co.il/index.php/free-video-ordering
+Redirect /encouragement/main http://www.baj.co.il/encouragement/main.htm
+Redirect /article/sermon-viewing-togod http://www.baj.co.il/%D7%A1%D7%A4%D7%A8%D7%99%D7%99%D7%AA-%D7%A1%D7%A8%D7%98%D7%95%D7%A0%D7%99%D7%9D
+Redirect /article/sermon-viewing-shoded http://www.baj.co.il/%D7%A1%D7%A4%D7%A8%D7%99%D7%99%D7%AA-%D7%A1%D7%A8%D7%98%D7%95%D7%A0%D7%99%D7%9D
+Redirect /article/sermon-viewing-house http://www.baj.co.il/%D7%A1%D7%A4%D7%A8%D7%99%D7%99%D7%AA-%D7%A1%D7%A8%D7%98%D7%95%D7%A0%D7%99%D7%9D
+Redirect /testimony/testimony-mp http://www.baj.co.il/%D7%A2%D7%93%D7%95%D7%99%D7%95%D7%AA/68-%D7%99%D7%94%D7%95%D7%93%D7%99%D7%94-%D7%9E%D7%A9%D7%99%D7%97%D7%99%D7%AA-%D7%9E%D7%A1%D7%A4%D7%A8%D7%AA-%D7%9B%D7%99%D7%A6%D7%93-%D7%94%D7%97%D7%9C%D7%99%D7%98%D7%94-%D7%9C%D7%94%D7%90%D7%9E%D7%99%D7%9F-%D7%91%D7%99%D7%A9%D7%95%D7%A2
+Redirect /testimony/testimony-isabell http://www.baj.co.il/%D7%A2%D7%93%D7%95%D7%99%D7%95%D7%AA/117-%D7%A1%D7%99%D7%A4%D7%95%D7%A8%D7%94-%D7%A9%D7%9C-%D7%90%D7%99%D7%96%D6%B8%D7%91%D7%9C-%D7%9E%D7%94%D7%9B%D7%A0%D7%A1%D7%99%D7%99%D7%94-%D7%94%D7%A7%D7%AA%D7%95%D7%9C%D7%99%D7%AA-%D7%9C%D7%A7%D7%94%D7%99%D7%9C%D7%94-%D7%94%D7%9E%D7%A9%D7%99%D7%97%D7%99%D7%AA
+Redirect /testimony/rabi http://www.baj.co.il/free-books
+Redirect /question#?? http://www.baj.co.il/%D7%A9%D7%90%D7%9C%D7%95%D7%AA-%D7%95%D7%AA%D7%A9%D7%95%D7%91%D7%95%D7%AA
+Redirect /question#? http://www.baj.co.il/%D7%A9%D7%90%D7%9C%D7%95%D7%AA-%D7%95%D7%AA%D7%A9%D7%95%D7%91%D7%95%D7%AA
+Redirect /question#?? http://www.baj.co.il/%D7%A9%D7%90%D7%9C%D7%95%D7%AA-%D7%95%D7%AA%D7%A9%D7%95%D7%91%D7%95%D7%AA
+Redirect /question#? http://www.baj.co.il/%D7%A9%D7%90%D7%9C%D7%95%D7%AA-%D7%95%D7%AA%D7%A9%D7%95%D7%91%D7%95%D7%AA
+Redirect /blog http://www.baj.co.il
+Redirect /article/article-reading-history http://www.baj.co.il/article/article-reading-history.htm
+Redirect /yehudim_meshihiim_israel http://www.baj.co.il/yehudim_meshihiim_israel.htm
+Redirect /kmyt55/video/freedvd5.htm http://www.baj.co.il
+Redirect /kmyt55/video/freedvd48 http://www.baj.co.il
+Redirect /kehila/yehudi_meshihi http://www.baj.co.il
+Redirect 404 http://www.baj.co.il/index.php/404
+
+
+
+####################################
+
+## Begin - Joomla! core SEF Section.
+#
+RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]
+#
+# If the requested path and file is not /index.php and the request
+# has not already been internally rewritten to the index.php script
+RewriteCond %{REQUEST_URI} !^/index\.php
+# and the request is for something within the component folder,
+# or for the site root, or for an extensionless URL, or the
+# requested URL ends with one of the listed extensions
+RewriteCond %{REQUEST_URI} /component/|(/[^.]*|\.(php|html?|feed|pdf|vcf|raw))$ [NC]
+# and the requested path and file doesn't directly match a physical file
+RewriteCond %{REQUEST_FILENAME} !-f
+# and the requested path and file doesn't directly match a physical folder
+RewriteCond %{REQUEST_FILENAME} !-d
+# internally rewrite the request to the index.php script
+RewriteRule .* index.php [L]
+#
+## End - Joomla! core SEF Section.

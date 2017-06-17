@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<config>
+<!-- Joomla 1.5 -->
+  <params addPath="/administrator/components/com_n3ttemplate/elements">
+    <param type="heading" heading="COM_N3TTEMPLATE_CFG_BUTTON_SETTINGS" />        
+    <param name="button_acl" type="accesslevel" default="0" label="COM_N3TTEMPLATE_CFG_BUTTON_ACL" description="COM_N3TTEMPLATE_CFG_BUTTON_ACL_DESC" />
+    <param name="show_preview" type="radio" default="1" label="COM_N3TTEMPLATE_CFG_SHOW_PREVIEW" description="COM_N3TTEMPLATE_CFG_SHOW_PREVIEW_DESC">
+      <option value="0">COM_N3TTEMPLATE_CFG_HIDE</option>
+      <option value="1">COM_N3TTEMPLATE_CFG_SHOW</option>
+    </param>
+    <param type="heading" heading="COM_N3TTEMPLATE_CFG_ACL_SETTINGS" />
+    <param name="acl_manage" type="list" default="manager" label="COM_N3TTEMPLATE_CFG_ACL_MANAGE" description="COM_N3TTEMPLATE_CFG_ACL_MANAGE_DESC">
+      <option value="manager">COM_N3TTEMPLATE_CFG_MANAGER</option>
+      <option value="administrator">COM_N3TTEMPLATE_CFG_ADMINISTRATOR</option>
+      <option value="super administrator">COM_N3TTEMPLATE_CFG_SUPER_ADMINISTRATOR</option>
+    </param>
+    <param name="acl_admin" type="list" default="administrator" label="COM_N3TTEMPLATE_CFG_ACL_ADMIN" description="COM_N3TTEMPLATE_CFG_ACL_ADMIN_DESC">
+      <option value="manager">COM_N3TTEMPLATE_CFG_MANAGER</option>
+      <option value="administrator">COM_N3TTEMPLATE_CFG_ADMINISTRATOR</option>
+      <option value="super administrator">COM_N3TTEMPLATE_CFG_SUPER_ADMINISTRATOR</option>
+    </param>
+  </params>
+<!-- Joomla 1.6 -->
+  <fieldset name="general" label="COM_N3TTEMPLATE_CFG_BUTTON_SETTINGS" description="">
+    <field name="button_acl" type="accesslevel" default="0" label="COM_N3TTEMPLATE_CFG_BUTTON_ACL" description="COM_N3TTEMPLATE_CFG_BUTTON_ACL_DESC" />
+    <field name="show_preview" type="radio" default="1" label="COM_N3TTEMPLATE_CFG_SHOW_PREVIEW" description="COM_N3TTEMPLATE_CFG_SHOW_PREVIEW_DESC">
+      <option value="0">COM_N3TTEMPLATE_CFG_HIDE</option>
+      <option value="1">COM_N3TTEMPLATE_CFG_SHOW</option>
+    </field>
+  </fieldset>
+  <fieldset name="acl" label="COM_N3TTEMPLATE_CFG_ACL_SETTINGS" description="">
+    <field name="rules" type="rules" filter="rules" validate="rules" component="com_n3ttemplate" section="component" />
+  </fieldset>
+</config>
